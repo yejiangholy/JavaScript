@@ -52,3 +52,30 @@ var c = {
 }
 }
 c.log();
+
+
+///// 
+
+
+var arr = [1, 2, 3, 4]
+
+var myArr = [1, true, {name: 'Tony'}, function(name){
+    console.log("anything at all")
+}]
+
+// 
+
+function greet(first, second, last){
+    // set default value if not passing 
+    last = last || 'english';
+    
+    if(arguments.lengh === 0){
+        console.log("missing paramieters")
+        return; 
+    }
+    
+    console.log(first);
+    console.log(seoncd);
+    console.log(last);
+}
+
