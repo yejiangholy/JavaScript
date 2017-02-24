@@ -79,3 +79,14 @@ function greet(first, second, last){
     console.log(last);
 }
 
+// IIFE 
+// notice that in this way greeting var is a local var that not affacted by any 
+// golobal variable at all 
+
+(function(name) {
+    var greeting = 'Hello';
+    console.log(greeting + '' + name);
+}('John'));
+
+
+
