@@ -183,16 +183,57 @@ $("button").click(function(){
 });
 
 // call back function --> give a function as a arguemt to another function to let it call  
+//------------------------
+
+// call() apply() and bind() 
+
+var person{
+    first: 'John',
+    last::'Doe',
+    getFullName: function(){
+        var fullname = this.first + ' ' + this.last
+        return fullname;
+    }
+}
+
+var logName = function(l1, l2){
+    console.log('Logged: ' + this.getFullName());
+}
+
+var logPersonName = logName.bind(person)
+
+// bind make's that outer environment becomes what its bind() in, so this becomes what is inside () 
+
+logName.call(person, 'Carter','Jiang');
+logName.apply(person,['Carter','Jiang']);
 
 
+// call and apply did almost the same thing with bind but even invoke the funtion 
+
+// function borrwoing 
+
+var person2 = {
+    firstName: 'Jane',
+    lastName: 'Done'
+}
+// use the funiton in the preson object in the person2 --> apply or call method 
+console.log(person.getFullName.apply(person2));
 
 
+//funtion currying 
+
+// remember only bind will create a new copy of the function 
+
+function multi(a,b){
+    return a*b; 
+}
+// bind permantely set the b variable to value 2 
+var multiByTwo = multi.bind(this,2);
 
 
+var res = multiByTwo(4); 
 
-
-
-
+console.log(res);
 
 
 
