@@ -1,18 +1,17 @@
-b();
-console.log(a);
+var english = {};
+var spanish = {};
 
-var a = 'Hello World!';
+english.greetings = "Hello";
+spanish.greetings = "Hola";
 
-function b() {
-    console.log('called b here !');
+var objectLiteral = {
+    firstName: 'Mary',
+    isProgrammer: true
 }
 
-var person = new Object();
-var person = {firstName:'Carter',
-              lastName:'Alicea',
-              address: {
-                  street: '111 Main St',
-                  city: ' New York',
-                  state: 'NY'
-              }
-             };
+// from object --> Json string formart 
+JSON.stringify(english)
+
+console.log(JSON.stringify(english))
+
+// from Json String --> to an object 
