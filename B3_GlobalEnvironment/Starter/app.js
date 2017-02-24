@@ -166,6 +166,23 @@ greetEnglish('John','Done');
 greetSpanish('John','Done');
 
 
+// closure and callback 
+
+function sayHi(){
+    
+    var greeting = "Hi";
+    setTimeout(function() {
+        console.log(greeting);
+    },3000);
+}
+
+sayHi();
+// JQuery uses funtion expression and first-class functions 
+$("button").click(function(){
+      
+});
+
+// call back function --> give a function as a arguemt to another function to let it call  
 
 
 
