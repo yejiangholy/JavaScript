@@ -90,3 +90,49 @@ function greet(first, second, last){
 
 
 
+// closures 
+
+function greet(whayToSay){
+    return function(name){
+        console.log(whayToSay + ' ' + name)
+    }
+}
+
+greet('Hi Carter')('you are the best !')
+// or 
+var sayHi = greet('Hi Carter')
+sayHi('You are the best !')
+
+
+//example of closure 
+function builFunc(){
+    var arr = [];
+    
+    for(var i=0;i<3;i++){
+    arr.push(
+        function(){
+            console.log(i);
+        }
+    )
+   }
+    return arr; 
+}
+
+var fs = buildFunc(); 
+
+fs[0]();
+fs[1]();
+fs[2]();
+
+// all there will print 3, casue when we excuate the functions, i is 3 
+
+
+
+
+
+
+
+
+
+
+
