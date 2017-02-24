@@ -127,6 +127,59 @@ fs[2]();
 // all there will print 3, casue when we excuate the functions, i is 3 
 
 
+function builFunc2(){
+    var arr = [];
+    
+    for(var i=0;i<3;i++){
+        let j = i;
+    arr.push(
+        function(){
+            console.log(j);
+        }
+    )
+   }
+    return arr; 
+}
+
+var fs2 = buildFunc2(); 
+
+fs2[0]();
+fs2[1]();
+fs2[2]();
+
+// JS: funciton factory ex 
+function makeGreeting(language){
+    return function(first, last){
+        if(language === 'en'){
+            console.log('Hello'+fist +' '+ last);
+        }
+        if(language === 'es'){
+            console.log('Hola'+first+' '+ last)
+        }
+    }
+}
+
+var greetEnglish = makeGreeting('en');
+var greetSpanish = makeGreeting('es');
+
+greetEnglish('John','Done');
+greetSpanish('John','Done');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
