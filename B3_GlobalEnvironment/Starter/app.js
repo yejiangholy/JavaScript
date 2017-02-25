@@ -260,8 +260,40 @@ console.log(res)
  var res1 = _.map(arr1,function(item){return item*3})
  
  
+ // prototype in JS 
+ 
+ var person = {
+     first: 'Default',
+     last: 'Default',
+     getFullName: function(){
+return this.first + ' '+this.last; }
+ }
+
+ var John = {
+     first: 'John',
+     last: 'Doe'
+ }
+ 
+ // do not do it in reall word ! DEMO ONLY ! 
+ John.__proto__ = person
+ John.getFullName 
+
+ 
+ // everything is a object --> everything have a base progotype Object{} as its base prototype 
+ // add all properties of person to John
+_.extend(John,person)
+
+// building objects wiht seeting prototype 
 
 
+// funciton constructor 
 
+function Person(first, last){
+    this.first = first; 
+    this.last = last; 
+    console.log("one person is created")
+}
 
+var John = new Person("John","Doe");
+var Jay = new Person("Jay","hoe"); 
 
