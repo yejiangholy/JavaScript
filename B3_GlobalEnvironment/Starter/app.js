@@ -257,7 +257,9 @@ var res = mapForEach(arr1,checkPastLimit(1));
 console.log(res)
 
 
-
+ var res1 = _.map(arr1,function(item){return item*3})
+ 
+ 
 
 
 
