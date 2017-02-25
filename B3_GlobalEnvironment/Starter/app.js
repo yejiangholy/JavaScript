@@ -236,9 +236,25 @@ var res = multiByTwo(4);
 console.log(res);
 
 
+// JS funcitonal programming 
 
+var arr1 = [1, 2, 3, 4]
+function mapForEach(arr, fun){
+    var newArr = [];
+    for(var i=0;i<arr.length;i++){
+        newArr.push(fun(arr[i]));
+    }
+    return newArr;
+}
 
+var checkPastLimit = function(limiter){
+    return function(limiter, item){
+        return item > limiter;
+    }.bind(this,limiter);
+}
 
+var res = mapForEach(arr1,checkPastLimit(1)); 
+console.log(res)
 
 
 
